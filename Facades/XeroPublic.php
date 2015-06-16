@@ -3,7 +3,7 @@ namespace DrawMyAttention\XeroLaravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class XeroPrivate extends Facade
+class XeroPublic extends Facade
 {
-    protected static function getFacadeAccessor() { return 'XeroPrivate'; }
+    protected static function getFacadeAccessor() { return 'XeroPublic'; }
 }
