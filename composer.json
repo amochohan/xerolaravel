@@ -9,5 +9,10 @@
             "name": "Amo Chohan",
             "email": "amo.chohan@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+          "DrawMyAttention\\": "/"
+        }
+    }
 }
