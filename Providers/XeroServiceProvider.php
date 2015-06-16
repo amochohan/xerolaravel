@@ -28,7 +28,7 @@ class XeroServiceProvider extends ServiceProvider
             $config = include $configPath;
         } else {
             // Use the default package configuration as a fallback.
-            $config = include __DIR__.'/../config.php';
+            $config = include __DIR__ . '/../config.php';
         }
 
         $this->app->bind('XeroPrivate', function () use ($config) {
