@@ -1,0 +1,13 @@
+{
+    "name": "drawmyattention/xerolaravel",
+    "description": "A Laravel 5 wrapper for Xero's PHP API",
+    "require": {
+        "calcinai/xero-php": "1.1.*"
+    },
+    "authors": [
+        {
+            "name": "Amo Chohan",
+            "email": "amo.chohan@gmail.com"
+        }
+    ]
+}
