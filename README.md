@@ -86,9 +86,58 @@ IoC Container
     
     $xero->save($invoice);
     
-### Create a new invoice
-
-
+### Creating a new invoice
     
+    /* 
+     * Resolve instances of Xero, XeroInvoice, XeroContact 
+     * and XeroInvoiceLine out of the IoC container.
+     */
+     
+    $xero = $this->app->make('XeroPrivate');
+    $invoice = $this->app->make('XeroInvoice');
+    $contact = $this->app->make('XeroContact');
+    $line1 = $this->app->make('XeroInvoiceLine');
+    $line2 = $this->app->make('XeroInvoiceLine');
     
+    // Set up the invoice contact
+    $contact->setAccountNumber('DMA01');
+    $contact->setContactStatus('ACTIVE');
+    $contact->setName('Amo Chohan');
+    $contact->setFirstName('Amo');
+    $contact->setLastName('Chohan');
+    $contact->setEmailAddress('amo.chohan@gmail.com');
+    $contact->setDefaultCurrency('GBP');
+    
+    // Assign the contact to the invoice
+    $invoice->setContact($contact);
+    
+    // Set the type of invoice being created (ACCREC / ACCPAY)
+    $invoice->setType('ACCREC');
 
+    $dateInstance = new DateTime();
+    $invoice->setDate($dateInstance);
+    $invoice->setDueDate($dateInstance);
+    $invoice->setInvoiceNumber('DMA-00001');
+    $invoice->setReference('DMA-00001');
+    
+    // Provide an URL which can be linked to from Xero to view the full order
+    $invoice->setUrl('http://yourdomain/fullpathtotheorder');
+    
+    $invoice->setCurrencyCode('GBP');
+    $invoice->setStatus('Draft');
+    
+    // Create some order lines
+    $line1->setDescription('Blue tshirt');
+
+    $line1->setQuantity(1);
+    $line1->setUnitAmount(99.99);
+    $line1->setTaxAmount(0);
+    $line1->setLineAmount(99.99);
+    $line1->setDiscountRate(0); // Percentage
+
+    // Add the line to the order
+    $invoice->addLineItem($line1);
+
+    // Repeat for all lines...
+
+    $xero->save($invoice);
