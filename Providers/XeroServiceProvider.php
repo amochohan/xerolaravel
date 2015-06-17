@@ -42,5 +42,21 @@ class XeroServiceProvider extends ServiceProvider
         $this->app->bind('XeroPartner', function () use ($config) {
             return new \XeroPHP\Application\PartnerApplication($config);
         });
+
+        $this->app->bind('XeroInvoice', function(){
+           return new \XeroPHP\Models\Accounting\Invoice();
+        });
+
+        $this->app->bind('XeroInvoiceLine', function(){
+            return new \XeroPHP\Models\Accounting\Invoice\LineItem();
+        });
+
+        $this->app->bind('XeroContact', function(){
+            return new \XeroPHP\Models\Accounting\Contact();
+        });
+
+        $this->app->bind('XeroFile', function(){
+            return new \XeroPHP\Models\Files\File();
+        });
     }
 }
