@@ -1,8 +1,14 @@
 {
     "name": "drawmyattention/xerolaravel",
     "description": "A Laravel 5 wrapper for Xero's PHP API",
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/drawmyattention/xero-php"
+      }
+    ],
     "require": {
-        "calcinai/xero-php": "1.1.*"
+        "drawmyattention/xero-php": "1.2.1"
     },
     "authors": [
         {
