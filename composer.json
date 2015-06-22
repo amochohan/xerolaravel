@@ -4,11 +4,11 @@
     "repositories": [
       {
         "type": "vcs",
-        "url": "https://github.com/drawmyattention/xero-php"
+        "url": "git@github.com:drawmyattention/xero-php.git"
       }
     ],
     "require": {
-        "drawmyattention/xero-php": "dev-attachmentfix"
+        "calcinai/xero-php": "dev-attachmentfix"
     },
     "authors": [
         {
