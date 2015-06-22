@@ -141,3 +141,13 @@ IoC Container
     // Repeat for all lines...
 
     $xero->save($invoice);
+
+### Creating Attachments
+
+    $xero = $this->app->make('XeroPrivate');
+    
+    $attachment = $this->app->make('XeroAttachment')
+        ->createFromLocalFile(storage_path('your_file.pdf'));
+      
+    $invoice = $xero->loadByGUID('Accounting\\Invoice', 'AMO-00002');
+    $invoice->addAttachment($attachment);
