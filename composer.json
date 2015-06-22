@@ -8,7 +8,7 @@
       }
     ],
     "require": {
-        "calcinai/xero-php": "dev-attachmentfix"
+        "calcinai/xero-php": "1.2.*@dev"
     },
     "authors": [
         {
