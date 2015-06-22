@@ -8,7 +8,7 @@
       }
     ],
     "require": {
-        "calcinai/xero-php": "dev-attachmentfix"
+        "drawmyattention/xero-php": "dev-attachmentfix"
     },
     "authors": [
         {
