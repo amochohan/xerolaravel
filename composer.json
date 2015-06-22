@@ -8,7 +8,7 @@
       }
     ],
     "require": {
-        "drawmyattention/xero-php": "1.2.1"
+        "calcinai/xero-php": "dev-attachmentfix"
     },
     "authors": [
         {
