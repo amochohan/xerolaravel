@@ -55,8 +55,12 @@ class XeroServiceProvider extends ServiceProvider
             return new \XeroPHP\Models\Accounting\Contact();
         });
 
-        $this->app->bind('XeroFile', function(){
-            return new \XeroPHP\Models\Files\File();
+        $this->app->bind('XeroBrandingTheme', function(){
+            return new \XeroPHP\Models\Accounting\BrandingTheme();
+        });
+
+        $this->app->bind('XeroAttachment', function(){
+            return new \XeroPHP\Models\Accounting\Attachment();
         });
     }
 }
