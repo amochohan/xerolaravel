@@ -6,7 +6,7 @@ A Laravel 5 wrapper for calcinai/xero-php (a custom API for integrating with Xer
 
 **Require the package**
 
-    composer require drawmyattention/xerolaravel 1.0.*
+    composer require drawmyattention/xerolaravel "1.0.*"
     
 **Publish the configuration file**
 
