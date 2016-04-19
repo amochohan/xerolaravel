@@ -4,11 +4,11 @@
     "repositories": [
       {
         "type": "vcs",
-        "url": "https://github.com/calcinai/xero-php"
+        "url": "https://github.com/drawmyattention/xero-php"
       }
     ],
     "require": {
-        "calcinai/xero-php": "^1.2"
+        "calcinai/xero-php": "dev-implement-abstracts"
     },
     "authors": [
         {
