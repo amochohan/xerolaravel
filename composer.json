@@ -8,7 +8,7 @@
       }
     ],
     "require": {
-        "calcinai/xero-php": "dev-implement-abstracts#da87cace03b380bbfbdfcbe7cfbdc9f48e79ebdd"
+        "calcinai/xero-php": "dev-implement-abstracts"
     },
     "authors": [
         {
