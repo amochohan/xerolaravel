@@ -22,8 +22,11 @@ class XeroServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Use the published configuration file if it exists.
-        if(file_exists(config_path($this->config))) {
+        // Use cached configuration created by artisan cache:config if it exists.
+        if(config('xero.config')) {
+            $config = config('xero.config');  
+        } elseif(file_exists(config_path($this->config))) {
+            // Use the published configuration file if it exists.
             $configPath = config_path($this->config);
             $config = include $configPath;
         } else {
