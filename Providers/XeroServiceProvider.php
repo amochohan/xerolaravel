@@ -22,14 +22,11 @@ class XeroServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Use the published configuration file if it exists.
-        if(file_exists(config_path($this->config))) {
-            $configPath = config_path($this->config);
-            $config = include $configPath;
-        } else {
-            // Use the default package configuration as a fallback.
-            $config = include __DIR__ . '/../config.php';
-        }
+        $this->mergeConfigFrom(
+            __DIR__.'/../config.php', 'xero.config'
+        );
+
+        $config = $this->app->config->get('xero.config');
 
         $this->app->bind('XeroPrivate', function () use ($config) {
             return new \XeroPHP\Application\PrivateApplication($config);
