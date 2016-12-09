@@ -1,3 +1,5 @@
+[![Packagist](https://img.shields.io/packagist/dt/drawmyattention/xerolaravel.svg)](https://packagist.org/packages/drawmyattention/xerolaravel)
+
 # Xero Accounting API Laravel 5 Wrapper
 
 A Laravel 5 wrapper for calcinai/xero-php (a custom API for integrating with Xero).
