@@ -1,3 +1,5 @@
+[![Packagist](https://img.shields.io/packagist/dt/drawmyattention/xerolaravel.svg)](https://packagist.org/packages/drawmyattention/xerolaravel)
+
 # Xero Accounting API Laravel 5 Wrapper
 
 A Laravel 5 wrapper for calcinai/xero-php (a custom API for integrating with Xero).
@@ -7,17 +9,7 @@ A Laravel 5 wrapper for calcinai/xero-php (a custom API for integrating with Xer
 **Require the package**
 
     composer require drawmyattention/xerolaravel "1.0.*"
-    
-**Publish the configuration file**
 
-    php artisan vendor:publish
-    
-    
-This will create a ```xero/config.php``` within your ```config``` directory. (Note: Ensure that you have generated the
-necessary tokens and have generated the RSA keys required by Xero for authentication.) Edit the relevant values in the
-```config.php``` file.
-
-Ensure that the location of the RSA keys matches the required format ```(file://absolutepath)```
 
 **Add the Service Provider to your ```config/app.php``` under ```providers```**
 
@@ -26,6 +18,16 @@ Ensure that the location of the RSA keys matches the required format ```(file://
 **Register the Facades within ```config/app.php``` under ```aliases```
 
     'XeroPrivate'=> 'DrawMyAttention\XeroLaravel\Facades\XeroPrivate',
+    
+**Publish the configuration file**
+
+    php artisan vendor:publish
+       
+This will create a ```xero/config.php``` within your ```config``` directory. (Note: Ensure that you have generated the
+necessary tokens and have generated the RSA keys required by Xero for authentication.) Edit the relevant values in the
+```config.php``` file.
+
+Ensure that the location of the RSA keys matches the required format ```(file://absolutepath)```
 
 ## Dependencies and Requirements
 

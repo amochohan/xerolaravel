@@ -22,14 +22,13 @@ class XeroServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Use the published configuration file if it exists.
-        if(file_exists(config_path($this->config))) {
-            $configPath = config_path($this->config);
-            $config = include $configPath;
-        } else {
-            // Use the default package configuration as a fallback.
-            $config = include __DIR__ . '/../config.php';
-        }
+        // Merge defaults
+        $this->mergeConfigFrom(
+            __DIR__.'/../config.php', 'xero.config'
+        );
+
+        // Grab config
+        $config = $this->app->config->get('xero.config');
 
         $this->app->bind('XeroPrivate', function () use ($config) {
             return new \XeroPHP\Application\PrivateApplication($config);
@@ -47,12 +46,20 @@ class XeroServiceProvider extends ServiceProvider
            return new \XeroPHP\Models\Accounting\Invoice();
         });
 
+        $this->app->bind('XeroPayment', function(){
+           return new \XeroPHP\Models\Accounting\Payment();
+        });
+
         $this->app->bind('XeroInvoiceLine', function(){
             return new \XeroPHP\Models\Accounting\Invoice\LineItem();
         });
 
         $this->app->bind('XeroContact', function(){
             return new \XeroPHP\Models\Accounting\Contact();
+        });
+
+        $this->app->bind('XeroAccount', function(){
+            return new \XeroPHP\Models\Accounting\Account();
         });
 
         $this->app->bind('XeroBrandingTheme', function(){
