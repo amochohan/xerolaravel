@@ -4,11 +4,11 @@
     "repositories": [
       {
         "type": "vcs",
-        "url": "https://github.com/drawmyattention/xero-php"
+        "url": "https://github.com/calcinai/xero-php"
       }
     ],
     "require": {
-        "calcinai/xero-php": "dev-dev-implement-abstracts"
+        "calcinai/xero-php": "1.5*"
     },
     "authors": [
         {
@@ -20,6 +20,5 @@
         "psr-4": {
           "DrawMyAttention\\XeroLaravel\\": "/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
