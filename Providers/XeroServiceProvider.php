@@ -57,6 +57,10 @@ class XeroServiceProvider extends ServiceProvider
         $this->app->bind('XeroContact', function(){
             return new \XeroPHP\Models\Accounting\Contact();
         });
+        
+        $this->app->bind('XeroAddress', function(){
+            return new \XeroPHP\Models\Accounting\Address();
+        });
 
         $this->app->bind('XeroAccount', function(){
             return new \XeroPHP\Models\Accounting\Account();
