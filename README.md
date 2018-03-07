@@ -60,19 +60,19 @@ IoC Container
 
 Facade 
 
-    $invoice = XeroPrivate::loadByGUID('Accounting\\Invoice', 'inv-0004);
+    $invoice = XeroPrivate::loadByGUID('Accounting\\Invoice', 'inv-0004');
     
 IoC Container
 
     $xero = $this->app->make('XeroPrivate');
     
-    $invoice = $xero->loadByGUID('Accounting\\Invoice', 'inv-0004);
+    $invoice = $xero->loadByGUID('Accounting\\Invoice', 'inv-0004');
     
 ### Update an existing invoice
 
 Facade
 
-    $invoice = XeroPrivate::loadByGUID('Accounting\\Invoice', 'inv-0004);
+    $invoice = XeroPrivate::loadByGUID('Accounting\\Invoice', 'inv-0004');
     
     $invoice->setStatus('Paid');
     
@@ -82,7 +82,7 @@ IoC Container
 
     $xero = $this->app->make('XeroPrivate');
     
-    $invoice = $xero->loadByGUID('Accounting\\Invoice', 'inv-0004);
+    $invoice = $xero->loadByGUID('Accounting\\Invoice', 'inv-0004');
     
     $invoice->setStatus('Paid');
     
