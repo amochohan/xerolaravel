@@ -14,5 +14,12 @@
         "psr-4": {
           "DrawMyAttention\\XeroLaravel\\": "/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DrawMyAttention\\XeroLaravel\\Providers\\XeroServiceProvider"
+            ]
+        }
     }
 }
